@@ -1,11 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View, ImageBackground } from "react-native";
-import Container from "./src/components/Container";
+import { StyleSheet, View } from "react-native";
+import CarsList from "./src/components/CarsList";
+import Headers from "./src/components/Header";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Container carName={"ModelX"} price={"$32,425"} />
+      <Headers />
+      <CarsList />
     </View>
   );
 }
