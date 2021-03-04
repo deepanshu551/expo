@@ -1,0 +1,35 @@
+import React from "react";
+import { View, Text, StyleSheet, ImageBackground } from "react-native";
+
+const Container = (props) => {
+  return (
+    <View style={styles.carContainer}>
+      <ImageBackground
+        source={require("../../assets/images/ModelX.jpeg")}
+        style={styles.image}
+      />
+      <View style={styles.titles}>
+        <Text style={styles.title}>{props.carName}</Text>
+        <Text style={styles.subtitle}>Starting at {props.price}</Text>
+      </View>
+    </View>
+  );
+};
+const styles = StyleSheet.create({
+  carContainer: { height: "100%", width: "100%" },
+  titles: {
+    marginTop: "30%",
+
+    width: "100%",
+    alignItems: "center",
+  },
+  title: { fontSize: 40, fontWeight: "500" },
+  subtitle: { fontSize: 16, color: "#5c5e62" },
+  image: {
+    width: "100%",
+    height: "100%",
+    resizeMode: "cover",
+    position: "absolute",
+  },
+});
+export default Container;
